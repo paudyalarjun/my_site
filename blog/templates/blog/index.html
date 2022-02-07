@@ -1,5 +1,57 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block page_title %} Home page {% endblock %}
 
-{% block content %} Hello, How you doin? {% endblock %}
+{% block page_title %} My Blog {% endblock %}
+
+{% block css_files %}
+    <link rel='stylesheet' type='text/css' href="{% static "blog/index.css" %}">
+{% endblock %}
+
+{% block content %}
+    <header id="main-navigation">
+        <h1> <a href="">Arjun's Blog</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="{% static "blog/images/arjun.jpg" %}" alt="Arjun - The Author of the Blog">
+        </header>
+        <p>Hi, I am Arjun Paudyal and I like to write about random things.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                    <img src="{% static "blog/images/f1_car.png" %}" alt="Formula racing">
+                    <div class="post__content">
+                        <h3>Formula 1 racing</h3>
+                        <p>There's nothing like seeing the cars go around corners at more than 150kmph.
+                            And Formula 1 provides that exact scenario. Isn't it amazing.
+                        </p>
+                    </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>
+            I am still trying to figure out my life. What I write here is just random things.
+        </p>
+        <p>
+            I will try to write interesting things and keep you entertained.
+        </p>
+
+
+    </section>
+    
+{% endblock %}
