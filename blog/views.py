@@ -10,7 +10,7 @@ def starting_page(request):
 
 
 def posts(request):
-    return HttpResponse("HIIIIIIIIIIIIIIIIIIIIIIIIIIII")
+    return render(request, "blog/all-posts.html")
 
 
 def posts_detail(request):

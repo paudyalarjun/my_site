@@ -7,13 +7,21 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title> {% block page_title %} {% endblock %} </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' href="{% static "app.css" %}">
+    <link rel='stylesheet' href="{% static "app.css" %}">
     {% block css_files %} {% endblock %}
 
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
 </head>
 <body>
+    <header id="main-navigation">
+        <h1> <a href="{% url "starting-page" %}">Arjun's Blog</a></h1>
+        <nav>
+            <a href="{% url "posts-page" %}">All Posts</a>
+        </nav>
+    </header>
+
     {% block content %} {% endblock %}
+
 </body>
 </html>
 
