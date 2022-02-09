@@ -5,12 +5,12 @@
 
 <li>
     <article class="post">
-        <a href="">
-        <img src="{% static "blog/images/f1_car.png" %}" alt="Formula racing">
+        <a href="{% url 'post-detail-page' "into-the-wild"%}">
+        <img src="{% static "blog/images/into-the-wild.jpg"%}" alt="{{post.title}}"/>
         <div class="post__content">
-            <h3>Formula 1 racing</h3>
-            <p>There's nothing like seeing the cars go around corners at more than 150kmph.
-                And Formula 1 provides that exact scenario. Isn't it amazing.
+            <h3>{{post.title}}</h3>
+            <p>
+                {{post.excerpt}}
             </p>
         </div>
         </a>

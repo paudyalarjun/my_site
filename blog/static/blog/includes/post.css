@@ -8,7 +8,7 @@
 .post a{
     text-decoration: none;
     color: black;
-    transition: al 02s ease;
+    transition: all 02s ease;
     padding: 1rem;
 }
 
@@ -19,11 +19,11 @@
     background-color: #390281;
 }
 
-.post image{
-    width: 5rem;
-    height: 5rem;
+.post img {
+    width: 2rem;
+    height: 2rem;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 80%;
 }
 
 .post h3 {

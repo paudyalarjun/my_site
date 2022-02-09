@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_title %} My Post {% endblock %}
+
+
+{% block css_files %}
+    <link rel='stylesheet' href="{% static "blog/post-detail.css" %}">
+{% endblock %}
+
+{% block content %}
+    {% include "blog/includes/post.html" %}
+
+    <section id="summary">
+        <h2>Post Title</h2>
+            <article>
+                <img src="{% static "blog/images/F1_car.png" %}" alt="F1 Racing">
+                <address>By Arjun Paudyal</address>
+                <div>
+                    Last Updated on <time>February 8th</time>
+                </div>
+            </article>
+    </section>
+
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Hic exercitationem debitis, reprehenderit quae odio itaque non consectetur officiis
+            modi adipisci corporis obcaecati molestiae quos maxime fugit porro facere molestias vero!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Hic exercitationem debitis, reprehenderit quae odio itaque non consectetur officiis
+            modi adipisci corporis obcaecati molestiae quos maxime fugit porro facere molestias vero!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Hic exercitationem debitis, reprehenderit quae odio itaque non consectetur officiis
+            modi adipisci corporis obcaecati molestiae quos maxime fugit porro facere molestias vero!
+        </p>
+    </main>
+{% endblock %}
